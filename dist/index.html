@@ -52,12 +52,9 @@
     .button{display:inline-flex;align-items:center;justify-content:center;gap:28px;min-height:46px;padding:0 20px;border:1px solid #ffffff3d;border-radius:999px;text-decoration:none;font-size:11px;font-weight:800;transition:.2s ease}
     .button:hover{transform:translateY(-2px);border-color:#fff}
     .button.primary{background:var(--blue);border-color:var(--blue)}.button.primary:hover{background:#3478ed}
-    .hero-art{position:absolute;z-index:1;right:-3vw;bottom:70px;width:min(52vw,720px);height:480px;pointer-events:none}
-    .orb{position:absolute;right:11%;bottom:13%;width:290px;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 36% 30%,#fff 0,#9dc0ff 8%,#2e67c5 28%,#0d2c56 63%,transparent 65%);filter:drop-shadow(0 28px 50px #001025)}
-    .orbit{position:absolute;right:5%;bottom:20%;width:420px;height:155px;border:1px solid #8db5ff8c;border-radius:50%;transform:rotate(-12deg);box-shadow:0 0 40px #2468d52c}
-    .orbit.two{right:12%;bottom:11%;width:360px;height:130px;border-color:#ff9b6880;transform:rotate(18deg)}
-    .step{position:absolute;right:0;height:78px;border:1px solid #98baff54;background:linear-gradient(90deg,#0b2342bb,#4677b48c 58%,#ff7c3f61);transform:skewY(-4deg);box-shadow:0 20px 55px #0008,inset 0 1px #ffffff45}
-    .step.s1{bottom:0;width:640px}.step.s2{bottom:68px;right:56px;width:540px}.step.s3{bottom:136px;right:122px;width:420px}
+    .hero-art{position:absolute;z-index:1;right:2vw;bottom:86px;width:min(46vw,640px);height:500px;display:grid;place-items:center;pointer-events:none}
+    .hero-art:before{content:"";position:absolute;width:82%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,#ff8a4229 0,#2f73df20 42%,transparent 68%);filter:blur(18px)}
+    .hero-symbol{position:relative;width:min(39vw,520px);height:auto;filter:drop-shadow(0 34px 45px #0008) drop-shadow(0 0 34px #ff8a4235);transform:perspective(900px) rotateY(-8deg) rotate(-2deg)}
     .scroll-cue{position:absolute;z-index:3;left:50%;bottom:36px;transform:translateX(-50%);font-size:9px;letter-spacing:1.8px;color:#8192aa;text-transform:uppercase}
 
     section{padding-block:clamp(78px,9vw,125px)}
@@ -110,8 +107,8 @@
     .contact-primary{display:inline-flex;align-items:center;gap:35px;background:var(--blue);padding:15px 22px;border-radius:999px;text-decoration:none;font-size:12px;font-weight:800}
     .footer-cta{background:#10294d;border-top:1px solid var(--line);padding:24px 0}.footer-cta-inner{display:flex;align-items:center;justify-content:space-between;gap:20px}.footer-cta strong{font-size:15px}.footer-links{display:flex;flex-wrap:wrap;gap:22px;font-size:10px}
     footer{background:#061326;padding:52px 0 30px}.footer-grid{display:grid;grid-template-columns:1.2fr .8fr .8fr;gap:50px}.footer-name{font-size:25px;font-weight:800;letter-spacing:-.03em}.footer-small{margin-top:16px;color:#71829c;font-size:10px;line-height:1.65}.footer-col{display:grid;align-content:start;gap:12px;font-size:10px}.footer-col strong{color:#fff;margin-bottom:7px}.footer-col a{color:#8d9db4;text-decoration:none}.copyright{display:flex;justify-content:space-between;gap:20px;border-top:1px solid #ffffff10;margin-top:45px;padding-top:22px;color:#566881;font-size:8px;letter-spacing:1px}
-    @media(max-width:900px){.hero{min-height:700px}.hero-art{opacity:.55;right:-170px}.letter-grid{grid-template-columns:1fr}.strength-grid{grid-template-columns:repeat(2,1fr)}.project-list{grid-template-columns:1fr 1fr}.project:last-child{grid-column:1/-1;min-height:430px}.footer-grid{grid-template-columns:1fr 1fr}.footer-grid>div:first-child{grid-column:1/-1}}
-    @media(max-width:640px){.site-header{height:62px}.mark-text{display:none}.site-nav{gap:12px}.site-nav a:not(.nav-cta){display:none}.hero{min-height:680px}.hero-content{padding-top:55px}.hero h1{font-size:clamp(52px,16vw,75px)}.role{font-size:34px}.hero-note{max-width:88%}.hero-art{right:-310px;bottom:30px;opacity:.42}.step.s1{width:520px}.section-title{font-size:40px}.strength-grid{grid-template-columns:1fr}.strength{min-height:0}.project-tabs{font-size:9px}.project-list{grid-template-columns:1fr}.project,.project:last-child{grid-column:auto;min-height:480px}.job summary{grid-template-columns:70px 1fr auto;gap:12px;padding:18px 16px}.job h3{font-size:14px}.job p{padding:0 20px 20px 98px}.contact-banner{min-height:430px}.contact-banner:after{right:-130px;opacity:.55}.footer-cta-inner{align-items:flex-start;flex-direction:column}.footer-grid{grid-template-columns:1fr}.footer-grid>div:first-child{grid-column:auto}.copyright{line-height:1.5}.project-tabs span{padding-inline:3px}}
+    @media(max-width:900px){.hero{min-height:700px}.hero-art{opacity:.5;right:-145px}.letter-grid{grid-template-columns:1fr}.strength-grid{grid-template-columns:repeat(2,1fr)}.project-list{grid-template-columns:1fr 1fr}.project:last-child{grid-column:1/-1;min-height:430px}.footer-grid{grid-template-columns:1fr 1fr}.footer-grid>div:first-child{grid-column:1/-1}}
+    @media(max-width:640px){.site-header{height:62px}.mark-text{display:none}.site-nav{gap:12px}.site-nav a:not(.nav-cta){display:none}.hero{min-height:680px}.hero-content{padding-top:55px}.hero h1{font-size:clamp(52px,16vw,75px)}.role{font-size:34px}.hero-note{max-width:88%}.hero-art{right:-175px;bottom:15px;width:430px;height:360px;opacity:.28}.hero-symbol{width:330px}.section-title{font-size:40px}.strength-grid{grid-template-columns:1fr}.strength{min-height:0}.project-tabs{font-size:9px}.project-list{grid-template-columns:1fr}.project,.project:last-child{grid-column:auto;min-height:480px}.job summary{grid-template-columns:70px 1fr auto;gap:12px;padding:18px 16px}.job h3{font-size:14px}.job p{padding:0 20px 20px 98px}.contact-banner{min-height:430px}.contact-banner:after{right:-130px;opacity:.55}.footer-cta-inner{align-items:flex-start;flex-direction:column}.footer-grid{grid-template-columns:1fr}.footer-grid>div:first-child{grid-column:auto}.copyright{line-height:1.5}.project-tabs span{padding-inline:3px}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button,.project img,.plus{transition:none}}
   </style>
 </head>
@@ -131,23 +128,23 @@
       <div class="eyebrow">VIB · Digital Banking Technology Center</div>
       <h1>Cù Phạm<br>Thành Hiếu</h1>
       <p class="role">UI/UX Designer</p>
-      <p class="hero-note">4 năm thiết kế sản phẩm số — kết nối research, business và technology để tạo nên những trải nghiệm rõ ràng, nhất quán và khả thi khi triển khai.</p>
-      <div class="hero-actions"><a class="button primary" href="#cover">Đọc thư ứng tuyển ↓</a><a class="button" href="https://hieuu.webflow.io/" target="_blank" rel="noopener">Xem portfolio ↗</a></div>
+      <p class="hero-note">Thiết kế sản phẩm số — kết nối research, business và technology để tạo nên những trải nghiệm rõ ràng, nhất quán và khả thi khi triển khai.</p>
+      <div class="hero-actions"><a class="button primary" href="#cover">Đọc thư ứng tuyển ↓</a><a class="button" href="https://hieuu.webflow.io/" target="_blank" rel="noopener">Xem portfolio ↗</a><a class="button" href="cv.pdf" target="_blank" rel="noopener">Xem CV ↗</a></div>
     </div>
-    <div class="hero-art" aria-hidden="true"><i class="step s1"></i><i class="step s2"></i><i class="step s3"></i><i class="orbit"></i><i class="orbit two"></i><i class="orb"></i></div>
+    <div class="hero-art" aria-hidden="true"><img class="hero-symbol" src="assets/vib-symbol.png" alt=""></div>
     <div class="scroll-cue">Scroll to explore</div>
   </main>
 
   <section class="cover" id="cover">
     <div class="wrap">
       <div class="section-kicker">01 — Cover letter</div>
-      <h2 class="section-title">Tư duy sản phẩm.<br>Chất lượng trong từng điểm chạm.</h2>
+      <h2 class="section-title">Điểm chạm thương hiệu</h2>
       <p class="section-intro">Một UI/UX Designer có thể đi cùng feature từ lúc vấn đề còn chưa rõ cho đến khi sản phẩm được kiểm thử và vận hành.</p>
       <div class="letter-panel">
         <div class="letter-grid">
           <p class="letter-lead">Kính gửi đội ngũ tuyển dụng <span>VIB.</span></p>
           <div class="letter-copy">
-            <p>Em là <strong>Cù Phạm Thành Hiếu</strong>, ứng tuyển vị trí <strong>UI/UX Designer</strong> tại VIB Digital Banking Technology Center. Với 4 năm làm thiết kế sản phẩm số, em muốn mang kinh nghiệm biến yêu cầu phức tạp thành luồng trải nghiệm rõ ràng, nhất quán và khả thi khi triển khai vào các sản phẩm ngân hàng số.</p>
+            <p>Em là <strong>Cù Phạm Thành Hiếu</strong>, ứng tuyển vị trí <strong>UI/UX Designer</strong> tại VIB Digital Banking Technology Center. Với kinh nghiệm thiết kế sản phẩm số, em muốn mang khả năng biến yêu cầu phức tạp thành luồng trải nghiệm rõ ràng, nhất quán và khả thi khi triển khai vào các sản phẩm ngân hàng số.</p>
             <p>Gần nhất, trong vai trò <strong>UX/UI Designer · Feature Owner tại TGDĐ/ĐMX</strong>, em theo sát một feature từ làm rõ yêu cầu, nghiên cứu, user flow, wireframe, UI và prototype đến phối hợp phát triển, kiểm thử và đánh giá sau triển khai. Trước đó, em đã thiết kế Web, Mobile, CRM và HMI; xây dựng Design System; làm việc cùng Product Owner, BA, Developer và nhiều nhóm stakeholder.</p>
             <p>Em tin nền tảng này phù hợp với cách VIB tìm kiếm một Designer có thể vừa đào sâu UX, vừa duy trì chất lượng UI và làm việc hiệu quả trong đội ngũ đa chức năng.</p>
           </div>
@@ -166,7 +163,7 @@
   <section class="projects" id="projects">
     <div class="wrap">
       <div class="section-kicker">02 — Selected projects</div>
-      <h2 class="section-title">Dự án phù hợp nhất</h2>
+      <h2 class="section-title">Dự án nổi bật</h2>
       <div class="project-tabs" aria-hidden="true"><span>Tối ưu tăng trưởng</span><span>Sản phẩm tài chính</span><span>Hệ thống thiết kế</span></div>
       <p class="section-intro">Ba lát cắt thể hiện cách em nghiên cứu vấn đề, tạo trải nghiệm tài chính rõ ràng và xây nền tảng thiết kế có thể mở rộng.</p>
       <div class="project-list">
