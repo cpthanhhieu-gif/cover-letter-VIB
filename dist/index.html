@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Thư ứng tuyển UI/UX Designer tại VIB Digital Banking Technology Center của Cù Phạm Thành Hiếu.">
+  <meta name="theme-color" content="#f4f1eb">
+  <title>Cù Phạm Thành Hiếu — UI/UX Designer · VIB</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+    :root{
+      --paper:#f4f1eb;
+      --paper-2:#eae7e0;
+      --ink:#171717;
+      --muted:#64635f;
+      --line:#cbc7bf;
+      --blue:#0051a8;
+      --blue-dark:#003b7d;
+      --gold:#f7b916;
+      --white:#fff;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif;-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-underline-offset:5px}
+    a:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
+    img{max-width:100%}
+    .wrap{width:min(1400px,100%);margin:auto;padding-inline:clamp(20px,6vw,86px)}
+    .label{font-size:10px;line-height:1.4;letter-spacing:2.1px;font-weight:800;text-transform:uppercase;color:var(--blue)}
+    .site-header{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-block:24px;border-bottom:1px solid var(--line)}
+    .mark{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:900;color:var(--blue)}
+    .mark-symbol{display:grid;place-items:center;width:32px;height:32px;border:2px solid currentColor;border-radius:50%;font-size:15px}
+    .mark-text{font-size:12px;letter-spacing:.7px}
+    .site-nav{display:flex;gap:26px;font-size:11px;font-weight:700}
+    .site-nav a{text-decoration:none}
+    .site-nav a:hover{color:var(--blue)}
+    .hero{padding-block:clamp(55px,8vw,110px) clamp(72px,9vw,125px)}
+    .hero-top{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,.58fr);gap:clamp(42px,7vw,105px);align-items:start}
+    .hero h1{font-size:clamp(48px,7.4vw,108px);line-height:.91;letter-spacing:-.065em;margin:22px 0 24px;max-width:880px}
+    .role{font-size:clamp(25px,3.4vw,50px);line-height:1.05;letter-spacing:-.045em;color:var(--blue);margin:0}
+    .hero-card{position:relative;min-height:330px;background:var(--blue);color:#fff;border-radius:2px;padding:26px;overflow:hidden;box-shadow:18px 18px 0 var(--gold)}
+    .hero-card:before,.hero-card:after{content:"";position:absolute;border:1px solid #ffffff5a;border-radius:50%}
+    .hero-card:before{width:310px;height:310px;right:-140px;top:-130px}
+    .hero-card:after{width:170px;height:170px;right:-65px;top:-60px}
+    .card-kicker{font-size:9px;letter-spacing:1.8px;text-transform:uppercase;opacity:.78}
+    .hero-card strong{position:absolute;bottom:27px;left:26px;right:26px;font-size:clamp(27px,3vw,42px);line-height:1.05;letter-spacing:-.04em;font-weight:500}
+    .card-grid{position:absolute;inset:75px 24px auto;display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+    .card-grid i{height:8px;border-radius:20px;background:#ffffff3c}
+    .letter-layout{display:grid;grid-template-columns:230px minmax(0,820px);gap:clamp(28px,6vw,85px);margin-top:clamp(60px,8vw,115px);border-top:1px solid var(--line);padding-top:36px}
+    .letter-meta{font-size:10px;line-height:1.65;letter-spacing:1px;text-transform:uppercase;color:var(--muted)}
+    .letter{font-size:15px;line-height:1.78;color:#50504d}
+    .letter p{margin:0 0 20px}
+    .letter strong{color:var(--ink)}
+    .fit-list{list-style:none;padding:0;margin:30px 0}
+    .fit-list li{display:grid;grid-template-columns:30px 1fr;gap:14px;border-top:1px solid var(--line);padding:18px 0;margin:0}
+    .fit-list li:last-child{border-bottom:1px solid var(--line)}
+    .fit-list .num{font-size:10px;letter-spacing:1px;color:var(--blue);font-weight:800;padding-top:4px}
+    .actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
+    .button{display:inline-flex;align-items:center;justify-content:space-between;gap:30px;min-height:49px;padding:0 21px;border:1px solid #b9b5ad;border-radius:100px;text-decoration:none;font-size:11px;font-weight:800;transition:.2s ease}
+    .button:hover{transform:translateY(-2px);border-color:var(--blue)}
+    .button.primary{background:var(--blue);border-color:var(--blue);color:#fff}
+    .button.primary:hover{background:var(--blue-dark)}
+    .projects{background:var(--paper-2);padding-block:clamp(70px,9vw,120px)}
+    .section-head{display:flex;align-items:end;justify-content:space-between;gap:25px;margin:22px 0 48px}
+    .section-title{font-size:clamp(42px,5.8vw,80px);line-height:.98;letter-spacing:-.055em;font-weight:400;margin:0}
+    .section-note{max-width:300px;font-size:12px;line-height:1.65;color:var(--muted)}
+    .project-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2.2vw,34px)}
+    .project{display:flex;flex-direction:column;text-decoration:none;min-width:0}
+    .project-visual{position:relative;overflow:hidden;background:#0ca7ed;border-radius:7px;aspect-ratio:4/5}
+    .project-visual img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .45s ease}
+    .project:hover .project-visual img{transform:scale(1.025)}
+    .project-no{margin:18px 0 12px;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:#6a6862}
+    .project h3{display:flex;justify-content:space-between;gap:15px;font-size:clamp(23px,2.4vw,35px);line-height:1.1;letter-spacing:-.04em;font-weight:400;margin:0 0 13px}
+    .project h3 span{color:var(--blue)}
+    .project p{font-size:13px;line-height:1.7;color:#5a5955;margin:0 0 18px;max-width:90%}
+    .project-link{font-size:11px;font-weight:800;text-decoration:underline;margin-top:auto}
+    .metrics{display:flex;gap:20px;flex-wrap:wrap;margin-top:auto}
+    .metrics span{font-size:9px;color:#62615d}
+    .metrics strong{display:block;font-size:17px;color:var(--ink);margin-bottom:5px}
+    .experience{background:var(--ink);color:#fff;padding-block:clamp(72px,9vw,120px)}
+    .experience-grid{display:grid;grid-template-columns:.72fr 1.28fr;gap:clamp(40px,8vw,125px)}
+    .experience .label{color:#64a8ef}
+    .experience .section-title{margin-top:25px}
+    .job{display:grid;grid-template-columns:112px 1fr;gap:22px;padding:26px 0;border-top:1px solid #3b3b3b}
+    .job:first-child{border-top-color:#777}
+    .date{font-size:9px;letter-spacing:1.2px;color:#8e8e8e;padding-top:5px}
+    .job h3{font-size:20px;font-weight:400;margin:0 0 9px;letter-spacing:-.02em}
+    .company{font-size:9px;letter-spacing:1.45px;font-weight:800;text-transform:uppercase;color:#64a8ef}
+    .job p{font-size:12px;line-height:1.7;color:#aaa;margin:13px 0 0;max-width:620px}
+    .contact{background:#fff;padding-block:clamp(75px,9vw,115px) 32px}
+    .contact-grid{display:grid;grid-template-columns:.75fr 1.25fr;gap:clamp(40px,8vw,120px);align-items:center}
+    .contact .section-title{margin-top:25px}
+    .contact-primary{display:block;background:var(--blue);color:#fff;border-radius:100px;padding:25px 28px;text-decoration:none;font-size:clamp(17px,2vw,25px);font-weight:800;transition:.2s ease}
+    .contact-primary:hover{background:var(--blue-dark);transform:translateY(-2px)}
+    .contact-links{display:flex;gap:22px;flex-wrap:wrap;margin-top:22px;font-size:11px}
+    footer{display:flex;justify-content:space-between;gap:20px;border-top:1px solid #dedede;margin-top:80px;padding-top:25px;font-size:8px;letter-spacing:1.4px;color:#777}
+    .dock{position:fixed;z-index:20;bottom:15px;left:50%;transform:translateX(-50%);display:flex;gap:5px;padding:6px;background:#1f1f1f;border:1px solid #444;border-radius:16px;box-shadow:0 14px 35px #0004;max-width:calc(100% - 20px);overflow:auto}
+    .dock a{display:flex;align-items:center;justify-content:center;gap:12px;min-height:43px;padding:0 15px;border:1px solid #3e3e3e;border-radius:11px;color:#fff;text-decoration:none;white-space:nowrap;font-size:10px;font-weight:800}
+    .dock a:hover{background:#353535}
+    .dock .dock-mark{color:var(--gold);font-size:17px;border:0}
+    .skip{position:absolute;left:-999px;top:10px;background:#fff;padding:12px;z-index:99}
+    .skip:focus{left:10px}
+    @media(max-width:920px){
+      .hero-top{grid-template-columns:1fr}.hero-card{min-height:260px;max-width:560px}.letter-layout{grid-template-columns:1fr}.letter-meta{max-width:300px}.project-list{gap:18px}.project h3{font-size:24px}.experience-grid,.contact-grid{grid-template-columns:1fr}.experience-grid{gap:55px}.contact-grid{gap:38px}
+    }
+    @media(max-width:690px){
+      .wrap{padding-inline:20px}.site-nav{gap:15px}.site-nav a:nth-child(2){display:none}.mark-text{display:none}.hero h1{font-size:clamp(48px,15vw,70px)}.role{font-size:30px}.hero-card{box-shadow:10px 10px 0 var(--gold)}.project-list{grid-template-columns:1fr;gap:48px}.project{max-width:520px}.project h3{font-size:30px}.project p{max-width:none}.section-head{align-items:start;flex-direction:column}.job{grid-template-columns:82px 1fr;gap:15px}.contact-primary{padding:21px}.dock{width:calc(100% - 16px);justify-content:flex-start}.dock a{padding:0 11px}footer{line-height:1.5}.contact{padding-bottom:95px}
+    }
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button,.contact-primary,.project-visual img{transition:none}}
+  </style>
+</head>
+<body id="top">
+  <a class="skip" href="#main">Bỏ qua điều hướng</a>
+  <div class="wrap">
+    <header class="site-header">
+      <a class="mark" href="#top" aria-label="Về đầu trang"><span class="mark-symbol">H.</span><span class="mark-text">CÙ PHẠM THÀNH HIẾU</span></a>
+      <nav class="site-nav" aria-label="Điều hướng chính"><a href="#projects">Dự án</a><a href="#experience">Kinh nghiệm</a><a href="#contact">Liên hệ ↗</a></nav>
+    </header>
+    <main class="hero" id="main">
+      <div class="hero-top">
+        <div>
+          <div class="label">Thư ứng tuyển · UI/UX Designer · VIB</div>
+          <h1>Cù Phạm<br>Thành Hiếu</h1>
+          <p class="role">Designing clarity for digital banking.</p>
+        </div>
+        <aside class="hero-card" aria-label="Vị trí ứng tuyển">
+          <div class="card-kicker">VIB · Digital Banking Technology Center</div>
+          <div class="card-grid" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <strong>UI/UX<br>Designer</strong>
+        </aside>
+      </div>
+      <div class="letter-layout">
+        <div class="letter-meta">01 — Cover letter<br>4 năm UX/UI<br>Product · System · Research</div>
+        <div class="letter">
+          <p>Kính gửi Anh/Chị phụ trách tuyển dụng tại VIB,</p>
+          <p>Em là <strong>Cù Phạm Thành Hiếu</strong>, ứng tuyển vị trí <strong>UI/UX Designer</strong> tại VIB Digital Banking Technology Center. Với 4 năm làm thiết kế sản phẩm số, em muốn mang kinh nghiệm biến yêu cầu phức tạp thành luồng trải nghiệm rõ ràng, nhất quán và khả thi khi triển khai vào các sản phẩm ngân hàng số.</p>
+          <p>Gần nhất, trong vai trò <strong>UX/UI Designer · Feature Owner tại TGDĐ/ĐMX</strong>, em theo sát một feature từ làm rõ yêu cầu, nghiên cứu, user flow, wireframe, UI và prototype đến phối hợp phát triển, kiểm thử và đánh giá sau triển khai. Trước đó, em đã thiết kế Web, Mobile, CRM và HMI; xây dựng Design System; làm việc cùng Product Owner, BA, Developer và nhiều nhóm stakeholder.</p>
+          <p>Những điểm phù hợp trực tiếp với vai trò tại VIB:</p>
+          <ul class="fit-list">
+            <li><span class="num">01</span><span><strong>UX dựa trên bằng chứng:</strong> thực hiện research, competitive analysis, phỏng vấn/khảo sát và tổng hợp dữ liệu để đề xuất giải pháp, kiểm tra usability và tiếp tục tối ưu.</span></li>
+            <li><span class="num">02</span><span><strong>Thiết kế end-to-end:</strong> đi từ problem framing, user flow, wireframe đến UI, interactive prototype và bàn giao; chủ động audit trải nghiệm để tìm cơ hội cải thiện.</span></li>
+            <li><span class="num">03</span><span><strong>Design System &amp; chất lượng triển khai:</strong> xây dựng Atomic Design System, UI Kit, component library và guideline; phối hợp cùng Developer, tham gia UAT/FAT để đảm bảo thiết kế được hiện thực hóa chính xác.</span></li>
+            <li><span class="num">04</span><span><strong>Stakeholder collaboration:</strong> trình bày phương án rõ ràng, tiếp nhận phản hồi và cân bằng nhu cầu người dùng, mục tiêu kinh doanh cùng giới hạn kỹ thuật.</span></li>
+          </ul>
+          <p>Em tin nền tảng này phù hợp với cách VIB tìm kiếm một Designer có thể vừa đào sâu UX, vừa duy trì chất lượng UI và làm việc hiệu quả trong đội ngũ đa chức năng. Em mong có cơ hội trao đổi thêm qua các dự án tiêu biểu bên dưới.</p>
+          <p>Trân trọng,<br><strong>Cù Phạm Thành Hiếu</strong></p>
+          <div class="actions">
+            <a class="button primary" href="cv.pdf" target="_blank" rel="noopener">Xem CV <span>↗</span></a>
+            <a class="button" href="https://hieuu.webflow.io/" target="_blank" rel="noopener">Xem portfolio <span>↗</span></a>
+            <a class="button" href="https://aiproductarchive.vercel.app/" target="_blank" rel="noopener">AI Product Archive <span>↗</span></a>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <section class="projects" id="projects">
+    <div class="wrap">
+      <div class="label">02 — Selected projects</div>
+      <div class="section-head">
+        <h2 class="section-title">Dự án<br>phù hợp nhất.</h2>
+        <p class="section-note">Ba lát cắt về tối ưu trải nghiệm, sản phẩm tài chính và khả năng mở rộng hệ thống thiết kế.</p>
+      </div>
+      <div class="project-list">
+        <a class="project" href="https://hieuu.webflow.io/project/sim-dmx" target="_blank" rel="noopener">
+          <div class="project-visual"><img src="assets/sim-dmx-cover.png" alt="SIM DMX — tối ưu hành trình mua SIM" width="1122" height="1402" loading="lazy"></div>
+          <span class="project-no">01 / UX Optimization</span>
+          <h3>SIM DMX <span>↗</span></h3>
+          <p>Tối ưu hành trình mua SIM từ phân tích vấn đề đến thiết kế, thử nghiệm và đo lường hiệu quả sau triển khai.</p>
+          <div class="metrics"><span><strong>0,8% → 1,2%</strong>CTR</span><span><strong>+15%</strong>Engagement</span><span><strong>−10%</strong>Bounce rate</span></div>
+        </a>
+        <a class="project" href="https://vi-mwg.vercel.app/" target="_blank" rel="noopener">
+          <div class="project-visual"><img src="assets/vi-mwg-cover.png" alt="Vi-MWG — sản phẩm tài chính PayLater" width="1122" height="1402" loading="lazy"></div>
+          <span class="project-no">02 / Financial Product</span>
+          <h3>Vi-MWG PayLater <span>↗</span></h3>
+          <p>Thiết kế trải nghiệm sản phẩm tài chính với trọng tâm là thông tin dễ hiểu, trạng thái minh bạch và luồng thao tác rõ ràng.</p>
+          <span class="project-link">Khám phá dự án ↗</span>
+        </a>
+        <a class="project" href="https://hieuu.webflow.io/atomic-design-system-ui-kit" target="_blank" rel="noopener">
+          <div class="project-visual"><img src="assets/atomic-design-system-cover.png" alt="Atomic Design System — hệ thống component dùng chung" width="1122" height="1402" loading="lazy"></div>
+          <span class="project-no">03 / Design System</span>
+          <h3>Atomic Design System <span>↗</span></h3>
+          <p>Chuẩn hóa token, UI Kit, component và guideline để duy trì tính nhất quán, tăng tốc phối hợp Design–Development và hỗ trợ mở rộng Web/App.</p>
+          <span class="project-link">Xem hệ thống thiết kế ↗</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="experience" id="experience">
+    <div class="wrap experience-grid">
+      <div>
+        <div class="label">03 — Experience</div>
+        <h2 class="section-title">Đi qua<br>toàn bộ vòng đời<br>sản phẩm.</h2>
+      </div>
+      <div>
+        <article class="job"><div class="date">GẦN NHẤT</div><div><h3>UX/UI Designer · Feature Owner</h3><div class="company">thegioididong.com · Điện Máy Xanh · TopZone</div><p>Phụ trách UX/UI end-to-end: làm rõ yêu cầu, research, user flow, UI, prototype, phối hợp triển khai, UAT và đánh giá sau phát hành.</p></div></article>
+        <article class="job"><div class="date">TRƯỚC ĐÓ</div><div><h3>UX/UI Designer</h3><div class="company">Softworld Vietnam</div><p>Thiết kế HMI, thực hiện UX research và phối hợp đa chức năng để đưa giải pháp từ prototype vào vận hành.</p></div></article>
+        <article class="job"><div class="date">TRƯỚC ĐÓ</div><div><h3>UX/UI Designer</h3><div class="company">Liven Technology</div><p>Thiết kế Web, Mobile và CRM; xây dựng trải nghiệm responsive, nhất quán và có thể mở rộng.</p></div></article>
+        <article class="job"><div class="date">NỀN TẢNG</div><div><h3>Visual Designer</h3><div class="company">Liven Technology</div><p>Phát triển hệ thống nhận diện, chiến dịch truyền thông và ngôn ngữ thị giác cho nhiều ngành hàng.</p></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div class="contact-grid">
+        <div><div class="label">04 — Let's talk</div><h2 class="section-title">Sẵn sàng cho<br>cuộc trao đổi.</h2></div>
+        <div>
+          <a class="contact-primary" href="https://zalo.me/0935522285" target="_blank" rel="noopener">093 552 2285 ↗</a>
+          <div class="contact-links"><a href="mailto:cpthanhhieu@gmail.com">cpthanhhieu@gmail.com</a><a href="cv.pdf" target="_blank" rel="noopener">Mở CV ↗</a><a href="https://hieuu.webflow.io/" target="_blank" rel="noopener">Portfolio ↗</a><a href="#top">Về đầu trang ↑</a></div>
+        </div>
+      </div>
+      <footer><span>UI/UX DESIGNER APPLICATION · VIB · 2026</span><span>DESIGNED WITH CLARITY</span></footer>
+    </div>
+  </section>
+
+  <nav class="dock" aria-label="Lối tắt hồ sơ">
+    <a class="dock-mark" href="#top" aria-label="Về đầu trang">H.</a>
+    <a href="cv.pdf" target="_blank" rel="noopener">CV <span>↗</span></a>
+    <a href="https://hieuu.webflow.io/" target="_blank" rel="noopener">Portfolio <span>↗</span></a>
+    <a href="https://aiproductarchive.vercel.app/" target="_blank" rel="noopener">AI Archive <span>↗</span></a>
+    <a href="#projects">Projects <span>↓</span></a>
+  </nav>
+</body>
+</html>
